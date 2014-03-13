@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface XXXViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *gifView;
 
 @end

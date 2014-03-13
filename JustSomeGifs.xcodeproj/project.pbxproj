@@ -27,6 +27,7 @@
 		AEB73A5B18D1E32A00BBF44E /* F8oNz3Q.gif in Resources */ = {isa = PBXBuildFile; fileRef = AEB73A5618D1E32A00BBF44E /* F8oNz3Q.gif */; };
 		AEB73A5C18D1E32A00BBF44E /* uSaXek5.gif in Resources */ = {isa = PBXBuildFile; fileRef = AEB73A5718D1E32A00BBF44E /* uSaXek5.gif */; };
 		AEB73A5F18D1E3DB00BBF44E /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB73A5E18D1E3DB00BBF44E /* UIImage+animatedGIF.m */; };
+		AEB73A6118D1E41000BBF44E /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB73A6018D1E41000BBF44E /* ImageIO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		AEB73A5718D1E32A00BBF44E /* uSaXek5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = uSaXek5.gif; sourceTree = "<group>"; };
 		AEB73A5D18D1E3DB00BBF44E /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
 		AEB73A5E18D1E3DB00BBF44E /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
+		AEB73A6018D1E41000BBF44E /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEB73A6118D1E41000BBF44E /* ImageIO.framework in Frameworks */,
 				AE8DAF1918D1E2AA005F1EB2 /* CoreGraphics.framework in Frameworks */,
 				AE8DAF1B18D1E2AA005F1EB2 /* UIKit.framework in Frameworks */,
 				AE8DAF1718D1E2AA005F1EB2 /* Foundation.framework in Frameworks */,
@@ -116,6 +119,7 @@
 		AE8DAF1518D1E2AA005F1EB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AEB73A6018D1E41000BBF44E /* ImageIO.framework */,
 				AE8DAF1618D1E2AA005F1EB2 /* Foundation.framework */,
 				AE8DAF1818D1E2AA005F1EB2 /* CoreGraphics.framework */,
 				AE8DAF1A18D1E2AA005F1EB2 /* UIKit.framework */,
