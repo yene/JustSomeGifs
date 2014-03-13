@@ -16,21 +16,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iQZ-g1-2vS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iQZ-g1-2vS">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cgu-5g-roN">
+                                <rect key="frame" x="118" y="317" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="star.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleFav:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lML-i5-SQm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyU-Da-Ew5">
+                                <rect key="frame" x="237" y="133" width="135" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="next.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextGif:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nPP-aN-1H8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ks-kW-nid">
+                                <rect key="frame" x="20" y="126" width="135" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="previous.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="previousGif:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yhP-Zo-O4E"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="iQZ-g1-2vS" secondAttribute="bottom" id="9ra-Rt-RQ9"/>
+                            <constraint firstAttribute="trailing" secondItem="iQZ-g1-2vS" secondAttribute="trailing" id="dEH-B6-0y8"/>
+                            <constraint firstItem="iQZ-g1-2vS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="fxr-ca-BSY"/>
+                            <constraint firstItem="iQZ-g1-2vS" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="vdk-3U-ARf"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="gifView" destination="iQZ-g1-2vS" id="Xwq-Re-s1u"/>
+                        <outlet property="nextButton" destination="JyU-Da-Ew5" id="PgM-dv-Xvk"/>
+                        <outlet property="previousButton" destination="0Ks-kW-nid" id="cWH-Lx-L2b"/>
+                        <outlet property="starButton" destination="Cgu-5g-roN" id="7be-Ve-F28"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="next.png" width="80" height="320"/>
+        <image name="previous.png" width="80" height="320"/>
+        <image name="star.png" width="80" height="80"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
