@@ -26,6 +26,7 @@
 		AEB73A5A18D1E32A00BBF44E /* 1eU2UEn.gif in Resources */ = {isa = PBXBuildFile; fileRef = AEB73A5518D1E32A00BBF44E /* 1eU2UEn.gif */; };
 		AEB73A5B18D1E32A00BBF44E /* F8oNz3Q.gif in Resources */ = {isa = PBXBuildFile; fileRef = AEB73A5618D1E32A00BBF44E /* F8oNz3Q.gif */; };
 		AEB73A5C18D1E32A00BBF44E /* uSaXek5.gif in Resources */ = {isa = PBXBuildFile; fileRef = AEB73A5718D1E32A00BBF44E /* uSaXek5.gif */; };
+		AEB73A5F18D1E3DB00BBF44E /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB73A5E18D1E3DB00BBF44E /* UIImage+animatedGIF.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		AEB73A5518D1E32A00BBF44E /* 1eU2UEn.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1eU2UEn.gif; sourceTree = "<group>"; };
 		AEB73A5618D1E32A00BBF44E /* F8oNz3Q.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = F8oNz3Q.gif; sourceTree = "<group>"; };
 		AEB73A5718D1E32A00BBF44E /* uSaXek5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = uSaXek5.gif; sourceTree = "<group>"; };
+		AEB73A5D18D1E3DB00BBF44E /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
+		AEB73A5E18D1E3DB00BBF44E /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 		AE8DAF1C18D1E2AA005F1EB2 /* JustSomeGifs */ = {
 			isa = PBXGroup;
 			children = (
+				AEB73A5D18D1E3DB00BBF44E /* UIImage+animatedGIF.h */,
+				AEB73A5E18D1E3DB00BBF44E /* UIImage+animatedGIF.m */,
 				AEB73A5118D1E2CB00BBF44E /* gifs */,
 				AE8DAF2518D1E2AA005F1EB2 /* XXXAppDelegate.h */,
 				AE8DAF2618D1E2AA005F1EB2 /* XXXAppDelegate.m */,
@@ -281,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE8DAF2318D1E2AA005F1EB2 /* main.m in Sources */,
+				AEB73A5F18D1E3DB00BBF44E /* UIImage+animatedGIF.m in Sources */,
 				AE8DAF2718D1E2AA005F1EB2 /* XXXAppDelegate.m in Sources */,
 				AE8DAF2D18D1E2AA005F1EB2 /* XXXViewController.m in Sources */,
 			);
