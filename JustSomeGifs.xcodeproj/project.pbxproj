@@ -28,7 +28,6 @@
 		AEB73A5C18D1E32A00BBF44E /* uSaXek5.gif in Resources */ = {isa = PBXBuildFile; fileRef = AEB73A5718D1E32A00BBF44E /* uSaXek5.gif */; };
 		AEB73A5F18D1E3DB00BBF44E /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB73A5E18D1E3DB00BBF44E /* UIImage+animatedGIF.m */; };
 		AEB73A6118D1E41000BBF44E /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB73A6018D1E41000BBF44E /* ImageIO.framework */; };
-		AEB73A6318D1E63E00BBF44E /* gifs in Resources */ = {isa = PBXBuildFile; fileRef = AEB73A6218D1E63E00BBF44E /* gifs */; };
 		AEB73A6918D1F31100BBF44E /* previous.png in Resources */ = {isa = PBXBuildFile; fileRef = AEB73A6518D1F31100BBF44E /* previous.png */; };
 		AEB73A6A18D1F31100BBF44E /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = AEB73A6618D1F31100BBF44E /* next.png */; };
 		AEB73A6B18D1F31100BBF44E /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = AEB73A6718D1F31100BBF44E /* star.png */; };
@@ -74,7 +73,6 @@
 		AEB73A5D18D1E3DB00BBF44E /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
 		AEB73A5E18D1E3DB00BBF44E /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
 		AEB73A6018D1E41000BBF44E /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		AEB73A6218D1E63E00BBF44E /* gifs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = gifs; sourceTree = "<group>"; };
 		AEB73A6518D1F31100BBF44E /* previous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = previous.png; sourceTree = "<group>"; };
 		AEB73A6618D1F31100BBF44E /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
 		AEB73A6718D1F31100BBF44E /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
@@ -109,7 +107,6 @@
 		AE8DAF0A18D1E2A9005F1EB2 = {
 			isa = PBXGroup;
 			children = (
-				AEB73A6218D1E63E00BBF44E /* gifs */,
 				AEB73A5218D1E2E300BBF44E /* README.md */,
 				AE8DAF1C18D1E2AA005F1EB2 /* JustSomeGifs */,
 				AE8DAF3B18D1E2AA005F1EB2 /* JustSomeGifsTests */,
@@ -289,7 +286,6 @@
 				AEB73A5A18D1E32A00BBF44E /* 1eU2UEn.gif in Resources */,
 				AE8DAF2F18D1E2AA005F1EB2 /* Images.xcassets in Resources */,
 				AEB73A5918D1E32A00BBF44E /* tqdCDsG.gif in Resources */,
-				AEB73A6318D1E63E00BBF44E /* gifs in Resources */,
 				AEB73A5818D1E32A00BBF44E /* cRozqMJ.gif in Resources */,
 				AEB73A6B18D1F31100BBF44E /* star.png in Resources */,
 				AE8DAF2118D1E2AA005F1EB2 /* InfoPlist.strings in Resources */,
