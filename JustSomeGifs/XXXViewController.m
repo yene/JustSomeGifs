@@ -13,7 +13,6 @@
   BOOL isFaved;
   NSArray *gifs;
   NSUInteger position;
-  NSTimer *timer;
 }
 @end
 
@@ -49,26 +48,10 @@
 {
   [super viewDidLoad];
   [self setup];
-      
   position = 0;
   
   [self hideUI];
-  
   [self showGif];
-  
-  [self starTimer];
-}
-
-- (void)starTimer;
-{
-  timer = [NSTimer scheduledTimerWithTimeInterval:30.0 target:self selector:@selector(showNextGif) userInfo:nil repeats:YES];
-  [timer setTolerance:1];
-}
-
-- (void)stopTimer;
-{
-  [timer invalidate];
-  timer = nil;
 }
 
 - (void)showGif;
@@ -77,6 +60,8 @@
   NSString *path = [[self documentsDirectory] stringByAppendingPathComponent:gifs[position]];
   NSURL *url = [NSURL fileURLWithPath:path];
   self.gifView.image = [UIImage animatedImageWithAnimatedGIFData:[NSData dataWithContentsOfURL:url]];
+  
+  [self performSelector:@selector(showNextGif) withObject:nil afterDelay:[self.gifView.image duration] * 2];
 }
 
 - (void)didReceiveMemoryWarning
@@ -93,21 +78,20 @@
   }
   isFaved = !isFaved;
   [self showUI];
-  [self stopTimer];
 }
 
 - (IBAction)previousGif:(id)sender {
+  [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(showNextGif) object:nil];
   position = (position == 0) ? [gifs count]-1 : --position;
   [self showGif];
   [self showUI];
-  [self stopTimer];
 }
 
 - (IBAction)nextGif:(id)sender {
+  [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(showNextGif) object:nil];
   position = ++position % [gifs count];
   [self showGif];
   [self showUI];
-  [self stopTimer];
 }
 
 - (void)showNextGif;
