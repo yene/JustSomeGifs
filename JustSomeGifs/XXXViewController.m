@@ -88,7 +88,9 @@
     [self.starButton setImage:[UIImage imageNamed:@"star.png"] forState:UIControlStateNormal];
   }
   
-  [self performSelector:@selector(showNextGif) withObject:nil afterDelay:[self.gifView.image duration] * 2];
+  NSUInteger duration = [self.gifView.image duration];
+  duration = duration < 10 ? duration * round(10/duration) : duration * 2;
+  [self performSelector:@selector(showNextGif) withObject:nil afterDelay:duration];
 }
 
 - (void)didReceiveMemoryWarning
