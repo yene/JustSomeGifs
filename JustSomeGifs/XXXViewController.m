@@ -11,7 +11,7 @@
 
 @interface XXXViewController () {
   BOOL isFaved;
-  NSArray *gifs;
+  NSMutableArray *gifs;
   NSUInteger position;
 }
 @end
@@ -34,6 +34,20 @@
   [self copyGifWithName:@"1eU2UEn"];
   [self copyGifWithName:@"F8oNz3Q"];
   [self copyGifWithName:@"uSaXek5"];
+  
+}
+
+- (void)loadFavedGifs;
+{
+  NSArray *fileNames = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[self documentsDirectory] error:nil];
+  
+  gifs = [NSMutableArray array];
+  
+  for (NSString *fileName in fileNames) {
+    NSString *path = [[self documentsDirectory] stringByAppendingPathComponent:fileName];
+    NSURL *url = [NSURL fileURLWithPath:path];
+    [gifs addObject:url];
+  }
 }
 
 - (void)copyGifWithName:(NSString *)name;
@@ -48,18 +62,18 @@
 {
   [super viewDidLoad];
   [self setup];
+  [self loadFavedGifs];
   position = 0;
   
   [self hideUI];
   [self showGif];
+
+  [self loadGifURLsFromReddit];
 }
 
 - (void)showGif;
 {
-  gifs = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[self documentsDirectory] error:nil];
-  NSString *path = [[self documentsDirectory] stringByAppendingPathComponent:gifs[position]];
-  NSURL *url = [NSURL fileURLWithPath:path];
-  self.gifView.image = [UIImage animatedImageWithAnimatedGIFData:[NSData dataWithContentsOfURL:url]];
+  self.gifView.image = [UIImage animatedImageWithAnimatedGIFData:[NSData dataWithContentsOfURL:gifs[position]]];
   
   [self performSelector:@selector(showNextGif) withObject:nil afterDelay:[self.gifView.image duration] * 2];
 }
@@ -122,6 +136,34 @@
 {
   [super touchesBegan:touches withEvent:event];
   [self showUI];
+}
+
+- (void)loadGifURLsFromReddit;
+{
+  NSURL *url = [[NSURL alloc] initWithString:@"http://www.reddit.com/r/gifs.json"];
+  
+  [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+    
+    if (error) {
+      // handle error :D
+    } else {
+      [self parseJSON:data];
+    }
+  }];
+}
+
+- (void)parseJSON:(NSData *)data;
+{
+  NSError *localError = nil;
+  NSDictionary *parsedObject = [NSJSONSerialization JSONObjectWithData:data options:0 error:&localError];
+  
+  if (localError) {
+    // handle error :D
+  }
+  NSArray *results = [parsedObject valueForKeyPath:@"data.children.data.url"];
+  for (NSString *url in results) {
+    [gifs performSelectorOnMainThread:@selector(addObject:) withObject:[NSURL URLWithString:url] waitUntilDone:YES];
+  }
 }
 
 @end
