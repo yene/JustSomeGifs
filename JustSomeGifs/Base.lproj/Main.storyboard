@@ -26,6 +26,9 @@
                                 <state key="normal" image="star.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="toggleFav:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Vrf-uP-enF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyU-Da-Ew5">
                                 <rect key="frame" x="488" y="0.0" width="80" height="320"/>
@@ -61,16 +64,6 @@
                                     <action selector="nextGif:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="U0Y-3N-qLh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHa-VF-klE">
-                                <rect key="frame" x="244" y="240" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="toggleFav:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HBK-eT-Pqw"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -81,18 +74,14 @@
                             <constraint firstItem="Q7r-iU-ubA" firstAttribute="bottom" secondItem="JyU-Da-Ew5" secondAttribute="bottom" id="CNH-vP-0eP"/>
                             <constraint firstItem="hGS-VU-ssU" firstAttribute="leading" secondItem="iQZ-g1-2vS" secondAttribute="leading" id="FFZ-eF-LI8"/>
                             <constraint firstItem="hGS-VU-ssU" firstAttribute="top" secondItem="iQZ-g1-2vS" secondAttribute="top" id="IGk-SB-ek7"/>
-                            <constraint firstItem="sHa-VF-klE" firstAttribute="top" secondItem="Cgu-5g-roN" secondAttribute="top" id="IUL-by-4W6"/>
                             <constraint firstItem="Q7r-iU-ubA" firstAttribute="baseline" secondItem="hGS-VU-ssU" secondAttribute="baseline" id="KFm-gv-Dtc"/>
                             <constraint firstItem="Q7r-iU-ubA" firstAttribute="leading" secondItem="JyU-Da-Ew5" secondAttribute="leading" id="NvR-9b-NjZ"/>
-                            <constraint firstItem="sHa-VF-klE" firstAttribute="trailing" secondItem="Cgu-5g-roN" secondAttribute="trailing" id="OgM-d1-tUH"/>
                             <constraint firstItem="hGS-VU-ssU" firstAttribute="bottom" secondItem="iQZ-g1-2vS" secondAttribute="bottom" id="TCG-sQ-NLC"/>
                             <constraint firstItem="hGS-VU-ssU" firstAttribute="bottom" secondItem="Cgu-5g-roN" secondAttribute="bottom" id="UYc-Yf-XbS"/>
                             <constraint firstItem="0Ks-kW-nid" firstAttribute="leading" secondItem="iQZ-g1-2vS" secondAttribute="leading" id="W0p-bN-Cp9"/>
-                            <constraint firstItem="sHa-VF-klE" firstAttribute="bottom" secondItem="Cgu-5g-roN" secondAttribute="bottom" id="Yoh-di-2RU"/>
                             <constraint firstItem="hGS-VU-ssU" firstAttribute="trailing" secondItem="0Ks-kW-nid" secondAttribute="trailing" id="bXJ-Ul-yvq"/>
                             <constraint firstItem="JyU-Da-Ew5" firstAttribute="trailing" secondItem="iQZ-g1-2vS" secondAttribute="trailing" id="dBf-JD-tVY"/>
                             <constraint firstAttribute="trailing" secondItem="iQZ-g1-2vS" secondAttribute="trailing" id="dEH-B6-0y8"/>
-                            <constraint firstItem="sHa-VF-klE" firstAttribute="leading" secondItem="Cgu-5g-roN" secondAttribute="leading" id="erm-LC-lzh"/>
                             <constraint firstItem="iQZ-g1-2vS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="fxr-ca-BSY"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="0Ks-kW-nid" secondAttribute="bottom" constant="9" id="vOK-z5-Rqt"/>
                             <constraint firstItem="iQZ-g1-2vS" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="vdk-3U-ARf"/>
