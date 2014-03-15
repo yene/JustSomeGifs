@@ -65,7 +65,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="Cgu-5g-roN" firstAttribute="centerX" secondItem="iQZ-g1-2vS" secondAttribute="centerX" id="1me-oC-fGv"/>
                             <constraint firstAttribute="bottom" secondItem="iQZ-g1-2vS" secondAttribute="bottom" id="9ra-Rt-RQ9"/>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AE2A4A7018D4FAD6006E6311 /* gifs in Resources */ = {isa = PBXBuildFile; fileRef = AE2A4A6F18D4FAD6006E6311 /* gifs */; };
+		AE2A4A7218D4FD20006E6311 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AE2A4A7118D4FD20006E6311 /* logo.png */; };
 		AE8DAF1718D1E2AA005F1EB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE8DAF1618D1E2AA005F1EB2 /* Foundation.framework */; };
 		AE8DAF1918D1E2AA005F1EB2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE8DAF1818D1E2AA005F1EB2 /* CoreGraphics.framework */; };
 		AE8DAF1B18D1E2AA005F1EB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE8DAF1A18D1E2AA005F1EB2 /* UIKit.framework */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		AE2A4A6F18D4FAD6006E6311 /* gifs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = gifs; sourceTree = "<group>"; };
+		AE2A4A7118D4FD20006E6311 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		AE8DAF1318D1E2AA005F1EB2 /* JustSomeGifs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustSomeGifs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE8DAF1618D1E2AA005F1EB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AE8DAF1818D1E2AA005F1EB2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -178,6 +180,7 @@
 		AEB73A6418D1F30200BBF44E /* button images */ = {
 			isa = PBXGroup;
 			children = (
+				AE2A4A7118D4FD20006E6311 /* logo.png */,
 				AEB73A6518D1F31100BBF44E /* previous.png */,
 				AEB73A6618D1F31100BBF44E /* next.png */,
 				AEB73A6718D1F31100BBF44E /* star.png */,
@@ -265,6 +268,7 @@
 			files = (
 				AE8DAF2F18D1E2AA005F1EB2 /* Images.xcassets in Resources */,
 				AEB73A6B18D1F31100BBF44E /* star.png in Resources */,
+				AE2A4A7218D4FD20006E6311 /* logo.png in Resources */,
 				AE8DAF2118D1E2AA005F1EB2 /* InfoPlist.strings in Resources */,
 				AEB73A6C18D1F31100BBF44E /* star2.png in Resources */,
 				AEB73A6A18D1F31100BBF44E /* next.png in Resources */,
