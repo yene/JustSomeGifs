@@ -28,11 +28,17 @@
   if ([files count] != 0) return;
   
   // folder is empty, do first time setup
-  [self copyGifWithName:@"cRozqMJ"];
-  [self copyGifWithName:@"tqdCDsG"];
-  [self copyGifWithName:@"1eU2UEn"];
-  [self copyGifWithName:@"F8oNz3Q"];
-  [self copyGifWithName:@"uSaXek5"];
+  NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
+  NSString *documentsPath = [resourcePath stringByAppendingPathComponent:@"gifs"];
+  NSError *error;
+  NSArray *directoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentsPath error:&error];
+  
+  for (NSString *filename in directoryContents) {
+    NSString *source = [documentsPath stringByAppendingPathComponent:filename];
+    NSString *target = [[self documentsDirectory] stringByAppendingPathComponent:filename];
+    [[NSFileManager defaultManager] copyItemAtPath:source toPath:target error:nil];
+    
+  }
   
 }
 
