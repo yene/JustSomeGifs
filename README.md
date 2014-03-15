@@ -1,12 +1,10 @@
-JustSomeGifs
+![logo](https://raw.github.com/yene/JustSomeGifs/master/JustSomeGifs/logo.png) JustSomeGifs
 ============
 
 iOS app that shows some gifs
 
-- it shows local stored gives as favs
-- its shows top gifs from reddit/r/gifs
-- it lets the user fav and unfav gifs
-- it loops through the gifs
+- it lets the user fav gifs, faved gifs are saved unfaved are deleted
+- it shows faved gifs first then loads top gifs from reddit
 
-TODO
-- detect if gifs want to be looped
+
+![screenshot](https://raw.github.com/yene/JustSomeGifs/master/Screenshot%202014-03-15%2022.31.11.png)
