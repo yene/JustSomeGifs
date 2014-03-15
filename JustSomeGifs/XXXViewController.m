@@ -10,7 +10,6 @@
 #import "UIImage+animatedGIF.h"
 
 @interface XXXViewController () {
-  BOOL isFaved;
   NSMutableArray *gifs;
   NSUInteger position;
 }
@@ -75,6 +74,14 @@
 {
   self.gifView.image = [UIImage animatedImageWithAnimatedGIFData:[NSData dataWithContentsOfURL:gifs[position]]];
   
+  [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[self documentsDirectory] error:nil];
+  
+  if ([(NSURL *)gifs[position] checkResourceIsReachableAndReturnError:nil]) {
+    [self.starButton setImage:[UIImage imageNamed:@"star2.png"] forState:UIControlStateNormal];
+  } else {
+    [self.starButton setImage:[UIImage imageNamed:@"star.png"] forState:UIControlStateNormal];
+  }
+  
   [self performSelector:@selector(showNextGif) withObject:nil afterDelay:[self.gifView.image duration] * 2];
 }
 
@@ -85,27 +92,32 @@
 }
 
 - (IBAction)toggleFav:(id)sender {
-  if (isFaved) {
+  if ([(NSURL *)gifs[position] checkResourceIsReachableAndReturnError:nil]) {
     [self.starButton setImage:[UIImage imageNamed:@"star.png"] forState:UIControlStateNormal];
+    [[NSFileManager defaultManager] removeItemAtURL:gifs[position] error:nil];
+    [gifs removeObjectAtIndex:position];
   } else {
     [self.starButton setImage:[UIImage imageNamed:@"star2.png"] forState:UIControlStateNormal];
+    NSData *data = [NSData dataWithContentsOfURL:gifs[position]];
+    NSString *gifFileName = [gifs[position] lastPathComponent];
+    NSString *gifPath = [[self documentsDirectory] stringByAppendingPathComponent:gifFileName];
+    [data writeToFile:gifPath atomically:NO];
   }
-  isFaved = !isFaved;
   [self showUI];
 }
 
 - (IBAction)previousGif:(id)sender {
   [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(showNextGif) object:nil];
   position = (position == 0) ? [gifs count]-1 : --position;
-  [self showGif];
   [self showUI];
+  [self showGif];
 }
 
 - (IBAction)nextGif:(id)sender {
   [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(showNextGif) object:nil];
   position = ++position % [gifs count];
-  [self showGif];
   [self showUI];
+  [self showGif];
 }
 
 - (void)showNextGif;
