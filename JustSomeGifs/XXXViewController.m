@@ -88,8 +88,8 @@
     [self.starButton setImage:[UIImage imageNamed:@"star.png"] forState:UIControlStateNormal];
   }
   
-  NSUInteger duration = [self.gifView.image duration];
-  duration = duration < 10 ? duration * round(10/duration) : duration * 2;
+  NSTimeInterval duration = [self.gifView.image duration];
+  duration = duration < 5 ? duration * round(10/duration) : duration * 2;
   [self performSelector:@selector(showNextGif) withObject:nil afterDelay:duration];
 }
 

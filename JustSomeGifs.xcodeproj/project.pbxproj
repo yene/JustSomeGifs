@@ -137,8 +137,6 @@
 				AEB73A6418D1F30200BBF44E /* button images */,
 				AEB73A5D18D1E3DB00BBF44E /* UIImage+animatedGIF.h */,
 				AEB73A5E18D1E3DB00BBF44E /* UIImage+animatedGIF.m */,
-				AE8DAF2518D1E2AA005F1EB2 /* XXXAppDelegate.h */,
-				AE8DAF2618D1E2AA005F1EB2 /* XXXAppDelegate.m */,
 				AE8DAF2818D1E2AA005F1EB2 /* Main.storyboard */,
 				AE8DAF2B18D1E2AA005F1EB2 /* XXXViewController.h */,
 				AE8DAF2C18D1E2AA005F1EB2 /* XXXViewController.m */,
@@ -151,6 +149,8 @@
 		AE8DAF1D18D1E2AA005F1EB2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AE8DAF2518D1E2AA005F1EB2 /* XXXAppDelegate.h */,
+				AE8DAF2618D1E2AA005F1EB2 /* XXXAppDelegate.m */,
 				AE8DAF1E18D1E2AA005F1EB2 /* JustSomeGifs-Info.plist */,
 				AE8DAF1F18D1E2AA005F1EB2 /* InfoPlist.strings */,
 				AE8DAF2218D1E2AA005F1EB2 /* main.m */,

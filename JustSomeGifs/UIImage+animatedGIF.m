@@ -17,7 +17,7 @@ static int delayCentisecondsForImageAtIndex(CGImageSourceRef const source, size_
     if (properties) {
         CFDictionaryRef const gifProperties = CFDictionaryGetValue(properties, kCGImagePropertyGIFDictionary);
         if (gifProperties) {
-            CFNumberRef const number = CFDictionaryGetValue(gifProperties, kCGImagePropertyGIFDelayTime);
+            CFNumberRef const number = CFDictionaryGetValue(gifProperties, kCGImagePropertyGIFUnclampedDelayTime);
             // Even though the GIF stores the delay as an integer number of centiseconds, ImageIO “helpfully” converts that to seconds for us.
             delayCentiseconds = (int)lrint([fromCF number doubleValue] * 100);
         }
@@ -87,6 +87,7 @@ static UIImage *animatedImageWithAnimatedGIFImageSource(CGImageSourceRef const s
     int delayCentiseconds[count]; // in centiseconds
     createImagesAndDelays(source, count, images, delayCentiseconds);
     int const totalDurationCentiseconds = sum(count, delayCentiseconds);
+    NSLog(@"duration of gif %f", totalDurationCentiseconds / 100.0);
     NSArray *const frames = frameArray(count, images, delayCentiseconds, totalDurationCentiseconds);
     UIImage *const animation = [UIImage animatedImageWithImages:frames duration:(NSTimeInterval)totalDurationCentiseconds / 100.0];
     releaseImages(count, images);
