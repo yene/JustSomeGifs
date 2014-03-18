@@ -78,6 +78,7 @@
 
 - (void)showGif;
 {
+  self.gifView.image = nil;
   self.gifView.image = [UIImage animatedImageWithAnimatedGIFData:[NSData dataWithContentsOfURL:gifs[position]]];
   
   [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[self documentsDirectory] error:nil];
