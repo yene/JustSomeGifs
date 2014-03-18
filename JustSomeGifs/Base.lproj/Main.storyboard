@@ -16,11 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iQZ-g1-2vS">
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iqo-1m-gl5">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cgu-5g-roN">
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cgu-5g-roN">
                                 <rect key="frame" x="244" y="240" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="star.png">
@@ -30,21 +31,21 @@
                                     <action selector="toggleFav:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Vrf-uP-enF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyU-Da-Ew5">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyU-Da-Ew5">
                                 <rect key="frame" x="488" y="0.0" width="80" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="next.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ks-kW-nid">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ks-kW-nid">
                                 <rect key="frame" x="0.0" y="-9" width="80" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="previous.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGS-VU-ssU">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGS-VU-ssU">
                                 <rect key="frame" x="0.0" y="0.0" width="80" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
@@ -54,7 +55,7 @@
                                     <action selector="previousGif:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="H61-d5-a5l"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7r-iU-ubA">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7r-iU-ubA">
                                 <rect key="frame" x="488" y="0.0" width="80" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
@@ -68,34 +69,22 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="Cgu-5g-roN" firstAttribute="centerX" secondItem="iQZ-g1-2vS" secondAttribute="centerX" id="1me-oC-fGv"/>
-                            <constraint firstAttribute="bottom" secondItem="iQZ-g1-2vS" secondAttribute="bottom" id="9ra-Rt-RQ9"/>
-                            <constraint firstItem="JyU-Da-Ew5" firstAttribute="top" secondItem="iQZ-g1-2vS" secondAttribute="top" id="AUG-ag-VrX"/>
-                            <constraint firstItem="Q7r-iU-ubA" firstAttribute="trailing" secondItem="iQZ-g1-2vS" secondAttribute="trailing" id="B12-Vt-yMI"/>
                             <constraint firstItem="Q7r-iU-ubA" firstAttribute="bottom" secondItem="JyU-Da-Ew5" secondAttribute="bottom" id="CNH-vP-0eP"/>
-                            <constraint firstItem="hGS-VU-ssU" firstAttribute="leading" secondItem="iQZ-g1-2vS" secondAttribute="leading" id="FFZ-eF-LI8"/>
-                            <constraint firstItem="hGS-VU-ssU" firstAttribute="top" secondItem="iQZ-g1-2vS" secondAttribute="top" id="IGk-SB-ek7"/>
                             <constraint firstItem="Q7r-iU-ubA" firstAttribute="baseline" secondItem="hGS-VU-ssU" secondAttribute="baseline" id="KFm-gv-Dtc"/>
                             <constraint firstItem="Q7r-iU-ubA" firstAttribute="leading" secondItem="JyU-Da-Ew5" secondAttribute="leading" id="NvR-9b-NjZ"/>
-                            <constraint firstItem="hGS-VU-ssU" firstAttribute="bottom" secondItem="iQZ-g1-2vS" secondAttribute="bottom" id="TCG-sQ-NLC"/>
                             <constraint firstItem="hGS-VU-ssU" firstAttribute="bottom" secondItem="Cgu-5g-roN" secondAttribute="bottom" id="UYc-Yf-XbS"/>
-                            <constraint firstItem="0Ks-kW-nid" firstAttribute="leading" secondItem="iQZ-g1-2vS" secondAttribute="leading" id="W0p-bN-Cp9"/>
                             <constraint firstItem="hGS-VU-ssU" firstAttribute="trailing" secondItem="0Ks-kW-nid" secondAttribute="trailing" id="bXJ-Ul-yvq"/>
-                            <constraint firstItem="JyU-Da-Ew5" firstAttribute="trailing" secondItem="iQZ-g1-2vS" secondAttribute="trailing" id="dBf-JD-tVY"/>
-                            <constraint firstAttribute="trailing" secondItem="iQZ-g1-2vS" secondAttribute="trailing" id="dEH-B6-0y8"/>
-                            <constraint firstItem="iQZ-g1-2vS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="fxr-ca-BSY"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="0Ks-kW-nid" secondAttribute="bottom" constant="9" id="vOK-z5-Rqt"/>
-                            <constraint firstItem="iQZ-g1-2vS" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="vdk-3U-ARf"/>
                             <constraint firstItem="Q7r-iU-ubA" firstAttribute="top" secondItem="JyU-Da-Ew5" secondAttribute="top" id="xnr-98-Dzf"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="gifView" destination="iQZ-g1-2vS" id="Xwq-Re-s1u"/>
                         <outlet property="nextButton" destination="JyU-Da-Ew5" id="PgM-dv-Xvk"/>
                         <outlet property="previousButton" destination="0Ks-kW-nid" id="cWH-Lx-L2b"/>
                         <outlet property="starButton" destination="Cgu-5g-roN" id="7be-Ve-F28"/>
+                        <outlet property="webView" destination="iqo-1m-gl5" id="nES-md-nIr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

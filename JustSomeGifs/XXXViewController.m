@@ -78,8 +78,14 @@
 
 - (void)showGif;
 {
-  self.gifView.image = nil;
-  self.gifView.image = [UIImage animatedImageWithAnimatedGIFData:[NSData dataWithContentsOfURL:gifs[position]]];
+  NSURLRequest *request = [NSURLRequest requestWithURL:gifs[position]];
+  [self.webView loadRequest:request];
+  
+  //self.gifView.image = nil;
+  NSData *gifData = [NSData dataWithContentsOfURL:gifs[position]];
+  UIImage *gifImage = [UIImage animatedImageWithAnimatedGIFData:gifData];
+  
+  //[self.webView loadData:gifData MIMEType:@"mage/gif" textEncodingName:@"UTF-8" baseURL:nil];
   
   [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[self documentsDirectory] error:nil];
   
@@ -89,7 +95,7 @@
     [self.starButton setImage:[UIImage imageNamed:@"star.png"] forState:UIControlStateNormal];
   }
   
-  NSTimeInterval duration = [self.gifView.image duration];
+  NSTimeInterval duration = [gifImage duration];
   duration = duration < 5 ? duration * round(10/duration) : duration * 2;
   [self performSelector:@selector(showNextGif) withObject:nil afterDelay:duration];
 }
